@@ -22,7 +22,14 @@ List<Dictionary<string, string>> data = new()
     }
 };
 
-ReporterGenerator reporterGenerator = new ReporterGenerator(data);
+CSVReporterGenerator reporterGenerator = new CSVReporterGenerator(data);
+
+reporterGenerator.Title = "Relatório de Pessoas";
+
+reporterGenerator.HeadLine = "Lista de pessoas cadastradas no sistema";
+
+reporterGenerator.FooterLine = "Total de pessoas: " + data.Count;
+
 
 string caminhoArquivo = reporterGenerator.GenerateReport();
 

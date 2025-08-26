@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace ReportGenerator
 {
-    public class ReporterGenerator
+    public class CSVReporterGenerator: IReportGenerator
     {
         public List<Dictionary<string, string>> Input { get; set; }
 
-        public ReporterGenerator(List<Dictionary<string, string>> input) 
+        public string Title { get; set; }
+        public string HeadLine { get; set; }
+        public string FooterLine { get; set; }
+        public CSVReporterGenerator(List<Dictionary<string, string>> input) 
         { 
             Input = input;
         }
@@ -22,6 +25,18 @@ namespace ReportGenerator
 
             StringBuilder report = new StringBuilder();
 
+            if (!string.IsNullOrWhiteSpace(Title))
+            {
+                report.AppendLine(Title);
+                report.AppendLine("");
+            }
+
+            if (!string.IsNullOrWhiteSpace(HeadLine))
+            {
+                report.AppendLine(HeadLine);
+                report.AppendLine("");
+            }
+
             string header = string.Join(';', Input.First().Keys);
 
             report.AppendLine(header);
@@ -32,7 +47,13 @@ namespace ReportGenerator
                 report.AppendLine(line);
             }
 
-            File.WriteAllText("report.csv", report.ToString());
+            if (!string.IsNullOrWhiteSpace(FooterLine))
+            {
+                report.AppendLine("");
+                report.AppendLine(FooterLine);
+            }
+
+            File.WriteAllText("report.csv", report.ToString(), Encoding.UTF8);
 
             return Path.GetFullPath("report.csv");
         }
