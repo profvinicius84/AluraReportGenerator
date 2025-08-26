@@ -53,6 +53,10 @@ namespace ReportGenerator
                 report.AppendLine(FooterLine);
             }
 
+            DateFormatter dateFormatter = new DateFormatter();
+
+            report.Append(dateFormatter.FormatData(DateTime.Now.ToString()));
+
             File.WriteAllText("report.csv", report.ToString(), Encoding.UTF8);
 
             return Path.GetFullPath("report.csv");
