@@ -4,6 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>Alura Report Generator</Title>
+    <Authors>Professor Vinícius</Authors>
+    <Version>1.1.2</Version>
+    <Company>Alura</Company>
+    <Description>Biblioteca de geração de relatórios </Description>
   </PropertyGroup>
 
 </Project>

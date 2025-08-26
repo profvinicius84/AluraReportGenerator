@@ -31,6 +31,6 @@ reporterGenerator.HeadLine = "Lista de pessoas cadastradas no sistema";
 reporterGenerator.FooterLine = "Total de pessoas: " + data.Count;
 
 
-string caminhoArquivo = reporterGenerator.GenerateReport();
+string caminhoArquivo = reporterGenerator.GenerateReport(); 
 
 Console.WriteLine("O arquivo foi salvo em: " + caminhoArquivo);
