@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="ReportGenerator">
-      <HintPath>..\ReportGenerator\ReportGenerator\bin\Release\net8.0\ReportGenerator.dll</HintPath>
+      <HintPath>..\ReportGenerator\bin\Release\net8.0\ReportGenerator.dll</HintPath>
     </Reference>
   </ItemGroup>
 
