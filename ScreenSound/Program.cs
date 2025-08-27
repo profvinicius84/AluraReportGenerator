@@ -2,6 +2,7 @@
 using System.Text.Json;
 using ScreenSound_04.Filtros;
 using ReportGenerator;
+using ScreenSound_04;
 
 
 using (HttpClient client = new HttpClient())
@@ -25,9 +26,9 @@ using (HttpClient client = new HttpClient())
             reportData.Add(record);
         }
 
-        IReportGenerator reportGenerator = new CSVReporterGenerator(reportData);
+        CSVGenerator reportGenerator = new CSVGenerator (reportData);
 
-        string local = reportGenerator.GenerateReport();
+        string local = reportGenerator.GenerateCSV("musicas.csv");
 
     }
     catch (Exception ex)
