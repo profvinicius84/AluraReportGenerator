@@ -22,7 +22,7 @@ A library that provides functionality for generating reports in various formats.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/AluraReportGenerator.git
+   git clone https://github.com/alura-cursos/AluraReportGenerator.git
    ```
 
 2. Navigate to the project directory:
