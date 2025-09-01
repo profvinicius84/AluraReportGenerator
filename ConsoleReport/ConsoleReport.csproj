@@ -11,4 +11,14 @@
     <ProjectReference Include="..\ReportGenerator\ReportGenerator.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <PackageId>ConsoleReport</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Prof Vinícius Costa Santos</Authors>
+    <Company>Alura</Company>
+    <Description>A console application for generating reports using the ReportGenerator library.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/profvinicius84/AluraReportGenerator</RepositoryUrl>
+  </PropertyGroup>
+
 </Project>

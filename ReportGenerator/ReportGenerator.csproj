@@ -11,4 +11,23 @@
     <Description>Biblioteca de geração de relatórios </Description>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>ReportGenerator_ProfVinicius</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Prof Vinícius Costa Santos</Authors>
+    <Company>Alura</Company>
+    <Description>A library for generating reports in various formats.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/profvinicius84/AluraReportGenerator</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/profvinicius84/AluraReportGenerator</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 </Project>
