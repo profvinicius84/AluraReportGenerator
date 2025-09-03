@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReportGenerator
+namespace ReportGenerator.Generators
 {
     /// <summary>
     /// Defines the contract for generating reports with customizable input, title, headline, and footer.

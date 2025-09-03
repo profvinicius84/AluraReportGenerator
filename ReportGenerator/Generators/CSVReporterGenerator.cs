@@ -1,24 +1,17 @@
-﻿using System;
+﻿using ReportGenerator.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReportGenerator
+namespace ReportGenerator.Generators
 {
-    public class CSVReporterGenerator: IReportGenerator
+    public class CSVReporterGenerator: ReportGeneratorBase
     {
-        public List<Dictionary<string, string>> Input { get; set; }
+        public CSVReporterGenerator(List<Dictionary<string, string>> input) : base(input) { }
 
-        public string Title { get; set; }
-        public string HeadLine { get; set; }
-        public string FooterLine { get; set; }
-        public CSVReporterGenerator(List<Dictionary<string, string>> input) 
-        { 
-            Input = input;
-        }
-
-        public string GenerateReport()
+        public override string GenerateReport()
         {
             if (Input == null || Input.Count == 0)
                 throw new Exception("Input de dados invalido");

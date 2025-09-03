@@ -1,4 +1,4 @@
-﻿using ReportGenerator;
+﻿using ReportGenerator.Generators;
 
 List<Dictionary<string, string>> data = new()
 {
@@ -22,7 +22,7 @@ List<Dictionary<string, string>> data = new()
     }
 };
 
-CSVReporterGenerator reporterGenerator = new CSVReporterGenerator(data);
+PDFReporterGenerator reporterGenerator = new PDFReporterGenerator(data);
 
 reporterGenerator.Title = "Relatório de Pessoas";
 

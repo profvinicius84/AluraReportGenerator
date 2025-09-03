@@ -6,13 +6,13 @@
     <Nullable>enable</Nullable>
     <Title>Alura Report Generator</Title>
     <Authors>Professor Vinícius</Authors>
-    <Version>1.1.2</Version>
+    <Version>1.0.0</Version>
     <Company>Alura</Company>
-    <Description>Biblioteca de geração de relatórios </Description>
+    <Description>Biblioteca de geração de relatórios</Description>
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>ReportGenerator_ProfVinicius</PackageId>
+    <PackageId>Alura_ReportGenerator</PackageId>
     <Version>1.0.0</Version>
     <Authors>Prof Vinícius Costa Santos</Authors>
     <Company>Alura</Company>
@@ -28,6 +28,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="7.2.5" />
   </ItemGroup>
 
 </Project>
