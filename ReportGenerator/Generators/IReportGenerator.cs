@@ -1,43 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ReportGenerator.Generators;
 
-namespace ReportGenerator.Generators
+/// <summary>
+/// Define o contrato para geradores de relatórios com entrada de dados e metadados configuráveis.
+/// </summary>
+/// <remarks>
+/// Implementações desta interface permitem configurar os dados do relatório (lista de registros com pares chave/valor)
+/// e metadados como título, manchete e rodapé, gerando um relatório e retornando o caminho do arquivo gerado.
+/// </remarks>
+public interface IReportGenerator
 {
     /// <summary>
-    /// Defines the contract for generating reports with customizable input, title, headline, and footer.
+    /// Obtém ou define os dados de entrada como uma lista de dicionários, onde cada dicionário representa um registro
+    /// com pares chave/valor.
     /// </summary>
-    /// <remarks>Implementations of this interface allow users to configure report data and metadata,  such as
-    /// the title, headline, and footer, and generate a report as a string.</remarks>
-    public interface IReportGenerator
-    {
-        /// <summary>
-        /// Gets or sets the input data as a list of dictionaries, where each dictionary represents a collection of
-        /// key-value pairs.
-        /// </summary>
-        List<Dictionary<string, string>> Input { get; set; }
+    List<Dictionary<string, string>> Input { get; set; }
 
-        /// <summary>
-        /// Gets or sets the title associated with the current object.
-        /// </summary>
-        string Title { get; set; }
+    /// <summary>
+    /// Obtém ou define o título do relatório.
+    /// </summary>
+    string Title { get; set; }
 
-        /// <summary>
-        /// Gets or sets the headline text associated with the content.
-        /// </summary>
-        string HeadLine { get; set; }
-        
-        /// <summary>
-        /// Gets or sets the footer line text to be displayed.
-        /// </summary>
-        string FooterLine { get; set; }
+    /// <summary>
+    /// Obtém ou define a manchete (subtítulo) do relatório.
+    /// </summary>
+    string HeadLine { get; set; }
+    
+    /// <summary>
+    /// Obtém ou define o texto do rodapé do relatório.
+    /// </summary>
+    string FooterLine { get; set; }
 
-        /// <summary>
-        /// Generates a report and returns its file path.
-        /// </summary>
-        /// <returns>A string containing the generated report's file path.</returns>
-        string GenerateReport();
-    }
+    /// <summary>
+    /// Gera o relatório e retorna o caminho completo do arquivo criado.
+    /// </summary>
+    /// <returns>Uma string contendo o caminho do arquivo do relatório gerado.</returns>
+    string GenerateReport();
 }

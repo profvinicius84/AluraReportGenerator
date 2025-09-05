@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ReportGenerator.Util;
 
-namespace ReportGenerator.Util
+/// <summary>
+/// Define o contrato para formatadores de dados.
+/// </summary>
+internal interface IDataFormatter
 {
-    internal interface IDataFormatter
-    {
-        string FormatData(string input);
-    }
+    /// <summary>
+    /// Formata o valor de entrada e retorna a representação formatada.
+    /// </summary>
+    /// <param name="input">Valor de entrada a ser formatado.</param>
+    /// <returns>O valor formatado.</returns>
+    string FormatData(string input);
 }
